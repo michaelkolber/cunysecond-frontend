@@ -1,0 +1,34 @@
+// @import 'normalize';
+
+// Colors
+$main-bg: #f9f9fb;
+$c-module-bg: #eaeef2;
+
+body {
+    background-color: $main-bg;
+}
+
+.c-module-space {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em;
+}
+
+.c-module {
+    background-color: $c-module-bg;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 30%;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+
+
+
+.c-common-tasks {
+    .button {
+        margin: .5em .5em 0 0;
+    }
+}

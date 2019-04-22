@@ -1,0 +1,33 @@
+{
+  "name": "cunysecond-frontend",
+  "version": "1.0.0",
+  "description": "Front-end for CunySecond",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelkolber/cunysecond-frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelkolber/cunysecond-frontend/issues"
+  },
+  "homepage": "https://github.com/michaelkolber/cunysecond-frontend#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "gulp": "^4.0.0",
+    "gulp-exec": "^3.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "sass": "^1.19.0"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.29",
+    "browser-sync": "^2.26.3",
+    "fomantic-ui": "^2.7.4"
+  }
+}
