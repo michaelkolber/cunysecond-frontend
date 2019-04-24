@@ -3,32 +3,36 @@
 // Colors
 $main-bg: #f9f9fb;
 $c-module-bg: #eaeef2;
+$semantic-blue: #2185d0;
 
 body {
     background-color: $main-bg;
 }
 
-.c-module-space {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 1em;
-}
-
-.c-module {
-    background-color: $c-module-bg;
-    border-radius: 3px;
-    box-sizing: border-box;
-    width: 30%;
-    margin: 1em 0;
-    padding: 1em;
-}
-
-
-
-
 .c-common-tasks {
     .button {
-        margin: .5em .5em 0 0;
+        // margin: .5em .5em 0 0;
     }
+}
+
+.ui.checkbox.middled {
+    margin-top: .75em;
+}
+
+.c-search-results .ui.items>.item .meta>a:not(.ui) {
+    color: $semantic-blue;
+    text-decoration: underline;
+}
+
+.c-rmp-explanation {
+    cursor: help;
+}
+
+.c-rmp-score {
+    font-weight: bold;
+}
+
+.c-search-results__details.c-search-results__details .grid .column {
+    padding-bottom: .5rem;
+    padding-top: .5rem;
 }

@@ -1,29 +1,19 @@
 <head>
     <link rel="stylesheet" type="text/css" href="/semantic/dist/semantic.min.css">
     <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-
-    <!-- <div class="c-module-space">
-        <div class="c-module">This is a module.</div>
-        <div class="c-module">This is a module.</div>
-        <div class="c-module">This is a module.</div>
-        <div class="c-module">
-            This is a module with more text than fits on-screen.
-            This is a module with more text.
-            This is a module with more text.
-            This is a module with more text.
-            This is a module with more text.
-            This is a module with more text.
-        </div>
-    </div> -->
     <div class="ui hidden divider"></div>
 
     <div class="ui three column grid container">
-        <div class="ten wide column">
-            <div class="ui blue segment">
-                <h5 class="ui dividing header">Your Classes</h5>
+        <div class="ten wide computer twelve wide tablet sixteen wide mobile column">
+            <div class="ui blue top attached segment">
+                <h5 class="ui header">Your Classes</h5>
+            </div>
+            <div class="ui bottom attached segment">
                 <table class="ui unstackable striped table">
                     <thead>
                         <tr>
@@ -81,10 +71,11 @@
                 </div>
             </div>
         </div>
-        <div class="six wide column">
-            <div class="ui blue segment c-common-tasks">
-                <h5 class="ui dividing header">Common Tasks</h5>
-                
+        <div class="four wide computer five wide tablet sixteen wide mobile column">
+            <div class="ui blue top attached segment">
+                <h5 class="ui header">Common Tasks</h5>
+            </div>
+            <div class="ui bottom attached segment c-common-tasks">                
                 <h6 class="ui sub header">Classes</h6>
                 
                 <div class="ui vertical fluid buttons">
@@ -122,24 +113,25 @@
             </div>
         </div>
 
-        <div class="column">
-            <div class="ui green segment">
-                <h5 class="ui dividing header">Account Summary</h5>
-                <h6 class="ui sub header">You Owe</h6>
+        <div class="four wide computer five wide tablet sixteen wide mobile column">
+            <div class="ui green top attached segment">
+                <h5 class="ui header">Account Summary</h5>
+            </div>
+            <div class="ui clearing bottom attached segment">
+                    <h6 class="ui sub header">You Owe</h6>
                 <span>$3,688.85</span>
                 <div class="ui hidden divider"></div>
-                <a class="ui fluid green basic button">Pay Now</a>
+                <a class="ui right floated green basic button">Pay Now</a>
             </div>
         </div>
-        <div class="column">
-            <div class="ui segment">Test</div>
-        </div>
 
-        <div class="sixteen wide column">
-            <div class="ui teal segment">
-                <h5 class="ui dividing header">Class Search</h5>
+        <div class="ten wide computer sixteen wide tablet column">
+            <div class="ui teal top attached segment">
+                <h5 class="ui header">Class Search</h5>
+            </div>
+            <div class="ui clearing bottom attached segment">
                 <form class="ui form">
-                    <div class="inline fields">
+                    <div class="three fields">
                         <div class="field">
                             <label>Institution</label>
                             <div class="ui search selection dropdown">
@@ -180,7 +172,7 @@
                         
                         <div class="field">
                             <label>Term</label>
-                            <div class="ui search selection dropdown">
+                            <div class="ui selection dropdown">
                                 <input type="hidden" name="term" value="1199">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Term</div>
@@ -193,13 +185,225 @@
                         </div>
 
                         <div class="field">
-                            <div class="ui checkbox">
+                            <label>&nbsp;</label>
+                            <div class="ui checkbox middled">
                                 <input type="checkbox" name="open-classes-only">
                                 <label>Show Open Classes Only</label>
                             </div>
                         </div>
                     </div>
+                    
+
+                    <div class="three fields">
+                        <div class="field">
+                            <label>Subject</label>
+                            <div class="ui search selection dropdown">
+                                <input type="hidden" name="subject">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Type to search...</div>
+                                <div class="menu">
+                                    <div class="item" data-value="foo">Computer Science</div>
+                                    <div class="item" data-value="bar">Psychology</div>
+                                    <div class="item" data-value="foobar">Design</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label>Course Number</label>
+                            <div class="ui selection dropdown">
+                                <input type="hidden" name="course-number-match" value="exactly">
+                                <i class="dropdown icon"></i>
+                                <div class="default text">Choose an option</div>
+                                <div class="menu">
+                                    <div class="item" data-value="contains">Contains</div>
+                                    <div class="item" data-value="greater-than">Greater than or equal to</div>
+                                    <div class="item" data-value="exactly">Exactly</div>
+                                    <div class="item" data-value="less-than">Less than or equal to</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="field">
+                            <label>&nbsp;</label>
+                            <input type="text" placeholder="Course Number">
+                        </div>
+                    </div>
+
+                    <div class="ui accordion">
+                        <div class="title">
+                            <i class="icon dropdown"></i>
+                            More Criteria
+                        </div>
+                        <div class="content">
+                            <div class="fields">
+                                <!-- This part needs to be coded correctly, specifically the "name" section of each field -->
+                                <div class="field">
+                                    <label>Course Career</label>
+                                    <div class="ui selection dropdown">
+                                        <input type="hidden" name="gender">
+                                        <i class="dropdown icon"></i>
+                                        <div class="default text">Gender</div>
+                                        <div class="menu">
+                                            <div class="item" data-value="male">Male</div>
+                                            <div class="item" data-value="female">Female</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 
+                                    We need a bunch more drop-downs like this.
+                                    We need drop-downs for:
+                                        - Course Attribute
+                                        - Course Attribute Value
+                                        - Requirement Designation
+                                        - Session
+                                        - Mode of instruction
+                                        - Meeting start time, as well as input box (should convert to (H)H:MMXM, e.g. 1:00PM, 12:00PM, 5:30AM)
+                                        - Ditto for meeting end time
+                                        - Days of week, then checkboxes for those days
+                                        - Class Number
+                                        - Course Keyword
+                                        - Minimum Units (with input box)
+                                        - Maximum units (with input box)
+                                        - Course Component
+                                        - Campus
+                                        - Location
+                                        - Instructor Last Name (with input box)
+                                -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui hidden divider"></div>
+                    <a class="ui right floated teal button">Search</a>
+                    <a class="ui right floated button">Clear</a>
                 </form>
+            </div>
+        </div>
+
+        <div class="twelve wide computer sixteen wide tablet column c-search-results">
+            <div class="ui teal top attached segment">
+                <h5 class="ui header">Results</h5>
+            </div>
+            <div class="ui clearing bottom attached segment">
+                <!-- <h5 class="ui dividing header">Results</h5> -->
+                <a class="ui compact right floated teal basic button">New Search</a>
+                <a class="ui compact right floated green basic button">Modify Search</a>
+                <div class="ui hidden divider"></div>
+                
+                <h5 class="ui dividing header">CSCI 370 - Software Engineering</h5>
+                <div class="ui segment">
+                    <div class="ui items">
+                        <div class="item">
+                            <div class="content">
+                                <div class="header">Robert Goldberg &mdash; M/W 9:15AM-10:30AM</div>
+                                <div class="meta">
+                                    <span class="c-rmp-explanation" title="Overall Quality">
+                                        OQ: <span class="c-rmp-score">2.8</span>
+                                    </span>
+                                     / 
+                                    <span class="c-rmp-explanation" title="Would Take Again">
+                                         TA: <span class="c-rmp-score">39%</span>
+                                    </span>
+                                     / 
+                                    <span class="c-rmp-explanation" title="Level of Difficulty">
+                                        LD: <span class="c-rmp-score">3.6</span>
+                                    </span>
+                                     (<a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=446485" target="_blank" rel="noopener">RMP</a>)
+                                </div>
+                                <div class="ui hidden divider"></div>
+                                <div class="description c-search-results__details">
+                                    <div class="ui three column grid">
+                                        <div class="column">
+                                            <h6 class="ui sub header">Class Number</h6>
+                                            50521
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Section</h6>
+                                            11-LEC Regular
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Room</h6>
+                                            Science B145
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Instruction Mode</h6>
+                                            In Person
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Meeting Dates</h6>
+                                            08/27/2019 - 12/20/2019
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Bookstore Link</h6>
+                                            n/a
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="ui top right attached blue label">Closed</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui segment">
+                    <div class="ui items">
+                        <div class="item">
+                            <div class="content">
+                                <div class="header">Bon Sy &mdash; Tu/Th 10:45AM-12:00PM</div>
+                                <div class="meta">
+                                    <span class="c-rmp-explanation" title="Overall Quality">
+                                        OQ: <span class="c-rmp-score">1.9</span>
+                                    </span>
+                                     / 
+                                    <span class="c-rmp-explanation" title="Would Take Again">
+                                         TA: <span class="c-rmp-score">33%</span>
+                                    </span>
+                                     / 
+                                    <span class="c-rmp-explanation" title="Level of Difficulty">
+                                        LD: <span class="c-rmp-score">4.1</span>
+                                    </span>
+                                     (<a href="https://www.ratemyprofessors.com/ShowRatings.jsp?tid=217852" target="_blank" rel="noopener">RMP</a>)
+                                </div>
+                                <div class="ui hidden divider"></div>
+                                <div class="description c-search-results__details">
+                                    <div class="ui three column grid">
+                                        <div class="column">
+                                            <h6 class="ui sub header">Class Number</h6>
+                                            50784
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Section</h6>
+                                            14-LEC Regular
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Room</h6>
+                                            Science A135B
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Instruction Mode</h6>
+                                            In Person
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Meeting Dates</h6>
+                                            08/27/2019 - 12/20/2019
+                                        </div>
+                                        <div class="column">
+                                            <h6 class="ui sub header">Bookstore Link</h6>
+                                            n/a
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="ui top right attached yellow label">Wait List</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui hidden divider"></div>
+                <a class="ui compact right floated teal basic button">New Search</a>
+                <a class="ui compact right floated green basic button">Modify Search</a>
             </div>
         </div>
     </div>
